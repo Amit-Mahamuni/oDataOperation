@@ -1,0 +1,41 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="oDataDemo.controller.view2">
+	<Page title="Emp List">
+		<content>
+			<List noDataText="Drop list items here" id="empList" items="{ path : 'oModel>/Employees', sorter : { path : 'Title', group : true } }">
+				<items>
+					<StandardListItem type="Navigation" title="{oModel>TitleOfCourtesy} {oModel&gt;FirstName} {oModel>LastName}" description="{oModel>Title}" press="empDetail" icon="sap-icon://person-placeholder">
+						<customData>
+							<core:CustomData key="RowID" value="{oModel>EmployeeID}"/>
+						</customData>
+					</StandardListItem>
+				</items>
+			</List>
+		</content>
+		<footer>
+			<Toolbar width="100%" id="__toolbar1">
+				<content>
+					<FlexBox width="100%" id="__box1" justifyContent="End">
+						<items>
+							<Button text="Add" width="100px" id="__button1" activeIcon="sap-icon://sys-add" icon="sap-icon://sys-add" iconFirst="false" type="Emphasized" tooltip="Add New Record"/>
+						</items>
+					</FlexBox>
+				</content>
+			</Toolbar>
+		</footer>
+		<subHeader>
+			<Toolbar width="100%" id="__toolbar2">
+				<content>
+					<FlexBox width="100%" id="__box0" alignContent="End" alignItems="Center" class="empListHeadSec">
+						<items>
+							<Text text="Employee List" id="__text0" class="empListTitle"/>
+							<SearchField width="80%" placeholder="Search" id="__field0" search="searchEmp" class="empListSechIn"/>
+						</items>
+					</FlexBox>
+				</content>
+			</Toolbar>
+		</subHeader>
+		<headerContent>
+			<Button text="Next Page" width="150px" tap="nextPage" id="__button0" icon="sap-icon://arrow-right" iconFirst="false" tooltip="Next Page"/>
+		</headerContent>
+	</Page>
+</mvc:View>

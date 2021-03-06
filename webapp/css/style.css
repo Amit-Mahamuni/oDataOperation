@@ -1,0 +1,15 @@
+/* Enter your custom styles here */
+
+.sapMSLITitle {
+    font-weight: 600;
+}
+.empListTitle{
+	font-weight: 600;
+	padding-right:20px;
+}
+.empListSechIn{
+	width:80%;
+}
+.empListHeadSec #__data9{
+	width:60%;
+}

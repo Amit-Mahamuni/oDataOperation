@@ -1,0 +1,70 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="oDataDemo.controller.view3">
+	<Page title="Employee Detail" navButtonPress="backList" showNavButton="true">
+		<content>
+			<ObjectHeader title="{EmpDetail>/TitleOfCourtesy} {EmpDetail&gt;/FirstName} {EmpDetail>/LastName}" number="123" numberUnit="eur" intro="{EmpDetail>/Title}" id="__header0"/>
+			<IconTabBar selectedKey="__xmlview0--__filter1" id="__bar0">
+				<items>
+					<IconTabFilter text="Address" iconColor="Critical" showAll="true" id="__filter0" design="Horizontal">
+						<content>
+							<Table noDataText="Drop column list items here and columns in the area above" id="__table0">
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="Address"/>
+											<Text text="{EmpDetail>/Address}"/>
+										</cells>
+									</ColumnListItem>
+									<ColumnListItem>
+										<cells>
+											<Text text="City"/>
+											<Text text="{EmpDetail>/City}"/>
+										</cells>
+									</ColumnListItem>
+									<ColumnListItem>
+										<cells>
+											<Text text="Country"/>
+											<Text text="{EmpDetail>/Country}"/>
+										</cells>
+									</ColumnListItem>
+									<ColumnListItem>
+										<cells>
+											<Text text="PostalCode"/>
+											<Text text="{EmpDetail>/PostalCode}"/>
+										</cells>
+									</ColumnListItem>
+									<ColumnListItem>
+										<cells>
+											<Text text="Region"/>
+											<Text text="{EmpDetail>/Region}"/>
+										</cells>
+									</ColumnListItem>
+								</items>
+								<columns>
+									<Column>
+										<header>
+											<Label text="Key"/>
+										</header>
+									</Column>
+									<Column>
+											<header>
+											<Label text="Value"/>
+										</header>
+									</Column>
+								</columns>
+							</Table>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter text="Note" iconColor="Critical" id="__filter1" design="Horizontal">
+					    <content>
+					        <Text text="{EmpDetail>/Notes}" id="__text19"/>
+					    </content>
+					</IconTabFilter>
+									<IconTabFilter text="ENote" iconColor="Critical" id="__filter2" design="Horizontal">
+					<content>
+					    <Image width="140px" height="140px" id="__image0" src="{EmpDetail>/Photo}"/>
+					</content>
+					</IconTabFilter></items>
+			</IconTabBar>
+		</content>
+	</Page>
+</mvc:View>
